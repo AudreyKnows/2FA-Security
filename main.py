@@ -1,8 +1,10 @@
 import time
-import pyotp 
+import pyotp
 key = ("NeuralNineMySuperSecretKey")
 counter = 0
-hotp =pyotp.HOTP(key)
+
+hotp = pyotp.HOTP(key) 
 print(hotp.at(0))
-      
+
+
 
