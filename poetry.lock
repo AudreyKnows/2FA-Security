@@ -366,6 +366,14 @@ optional = false
 python-versions = ">=3.7"
 
 [[package]]
+name = "pypng"
+version = "0.20220715.0"
+description = "Pure Python library for saving and loading PNG images"
+category = "main"
+optional = false
+python-versions = "*"
+
+[[package]]
 name = "pyseto"
 version = "1.7.0"
 description = "A Python implementation of PASETO/PASERK."
@@ -414,6 +422,26 @@ doc = ["tabulate (>=0.8.9)", "sphinx (>=4.5.0)"]
 gendocs = ["sphinx (>=4.5.0)", "sphinx-autodoc-typehints (>=1.18.1)", "sphinx-rtd-theme (>=1.0.0)", "pytoolconfig"]
 global = ["platformdirs (>=1.4.4)"]
 validation = ["pydantic (>=1.7.4)"]
+
+[[package]]
+name = "qrcode"
+version = "7.4.2"
+description = "QR Code image generator"
+category = "main"
+optional = false
+python-versions = ">=3.7"
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+pypng = "*"
+typing-extensions = "*"
+
+[package.extras]
+all = ["zest.releaser", "tox", "pytest", "pytest-cov", "pillow (>=9.1.0)"]
+dev = ["tox", "pytest", "pytest-cov"]
+maintainer = ["zest.releaser"]
+pil = ["pillow (>=9.1.0)"]
+test = ["coverage", "pytest"]
 
 [[package]]
 name = "replit"
@@ -588,7 +616,7 @@ multidict = ">=4.0"
 [metadata]
 lock-version = "1.1"
 python-versions = ">=3.10.0,<3.11"
-content-hash = "d7ba8b12279b74d841661e53eda1c220343516011610753dcf9ecd7aef287115"
+content-hash = "42157adc0aa7bd5411f77b9ab4d04975db74eebee36bfc2f5e1dfab4b5cff5e3"
 
 [metadata.files]
 aiohttp = []
@@ -624,9 +652,11 @@ pycparser = []
 pycryptodomex = []
 pyflakes = []
 pyotp = []
+pypng = []
 pyseto = []
 python-lsp-jsonrpc = []
 pytoolconfig = []
+qrcode = []
 replit = []
 replit-python-lsp-server = []
 requests = []

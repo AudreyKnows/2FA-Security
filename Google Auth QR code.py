@@ -1,6 +1,6 @@
 import time
-import pyotp
 import qrcode
+import pyotp
 key = ("NeuralNineMySuperSecretKey")
 counter = 0
 
